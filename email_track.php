@@ -12,7 +12,7 @@ if(isset($_GET["code"]))
 	VALUES ('".$_GET["code"]."','yes','".date("Y-m-d H:i:s", STRTOTIME(date('h:i:sa')))."') ";
 	$statement = $connect->prepare($query);
 	$statement->execute();
-
+// You Can Update also instead of inserting everytime by Using UPDATE SET 
 }
 
 ?>
