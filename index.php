@@ -12,17 +12,17 @@ $message = '';
 if(isset($_POST["send"]))
 {
 	require_once 'vendor/autoload.php';
-    $mail = new PHPMailer\PHPMailer\PHPMailer;
+        $mail = new PHPMailer\PHPMailer\PHPMailer;
 	$mail->IsSMTP();
 	$mail->Host = "smtp.gmail.com";
-    // set this true if SMTP host requires authentication to send mail
-    $mail->SMTPAuth = true;
-    //Provide username & password
-    $mail->Username = "YOUR_GMAIL_ID@gmail.com";
-    $mail->Password = "YOUR_GMAIL_PASSWORD";
-    $mail->SMTPSecure = "tls";
-    $mail->Port = 587;// Enter  port number 
-    $mail->SetFrom("YOUR_GMAIL_ID@gmail.com","YOUR_NAME");
+        // set this true if SMTP host requires authentication to send mail
+        $mail->SMTPAuth = true;
+        //Provide username & password
+        $mail->Username = "YOUR_GMAIL_ID@gmail.com";
+        $mail->Password = "YOUR_GMAIL_PASSWORD";
+        $mail->SMTPSecure = "tls";
+        $mail->Port = 587;// Enter  port number 
+        $mail->SetFrom("YOUR_GMAIL_ID@gmail.com","YOUR_NAME");
 	
 	$mail->AddAddress($_POST["receiver_email"]);
 	$mail->WordWrap = 50;
