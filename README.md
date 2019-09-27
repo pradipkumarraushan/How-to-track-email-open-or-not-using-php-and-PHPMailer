@@ -13,3 +13,7 @@
 # Snapshot :
 
 ![Image of User_interface](https://github.com/pradipkumarraushan/How-to-track-email-open-or-not-using-php-and-PHPMailer/blob/master/Snapshot.JPG)
+
+# Database Design
+
+![Image of db](https://github.com/pradipkumarraushan/How-to-track-email-open-or-not-using-php-and-PHPMailer/blob/master/Databse%20Design.JPG)
