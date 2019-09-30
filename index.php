@@ -363,16 +363,9 @@ function target_popup(form) {
 $(document).ready(function(){
 
     $('#myTable').dataTable({
-  "lengthMenu": [ [5, 10, 15, 25, 40, -1], [5, 10, 15, 25, 40, "All"] ]
-});
-
-$('#myTable').dataTable({
-	destroy: true,
+  "lengthMenu": [ [5, 10, 15, 25, 40, -1], [5, 10, 15, 25, 40, "All"] ] ,
   "order": [[ 3, "desc" ]]
 });
-
-
-
 
 });
 </script>
