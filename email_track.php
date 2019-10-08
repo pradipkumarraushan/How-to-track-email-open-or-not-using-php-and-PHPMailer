@@ -1,6 +1,4 @@
 <?php
-
-//email_track.php
 if (isset($_GET["code"]) && !empty($_GET["code"]))
 {
 $connect = new PDO("mysql:host=localhost;dbname=email_track_database", "root","");
