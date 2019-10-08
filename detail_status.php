@@ -71,9 +71,9 @@ function fetch_email_track_data($connect,$email_track_code)
 
 FROM email_data
 
-LEFT  JOIN email_track ON email_track.email_track_code = email_data.email_track_code WHERE email_data.email_track_code = '$email_track_code'  ORDER BY email_track.email_open_datetime DESC";
+LEFT  JOIN email_track ON email_track.email_track_code = email_data.email_track_code WHERE email_data.email_track_code = ?  ORDER BY email_track.email_open_datetime DESC";
 	$statement = $connect->prepare($query);
-	$statement->execute();
+	$statement->execute([$email_track_code]);
 	$result = $statement->fetchAll();
 	$total_row = $statement->rowCount();
 	$output = '
