@@ -224,7 +224,7 @@ function fetch_email_track_data($connect)
 FROM email_data
 
 LEFT  JOIN email_track ON email_track.email_track_code = email_data.email_track_code ORDER BY email_track.email_open_datetime DESC"; */
-$query = "SELECT email_data.email_subject,email_data.email_address,email_data.email_body,email_data.email_track_code,email_track.email_status,MAX(email_track.email_open_datetime) AS email_open_datetime FROM email_data LEFT JOIN email_track ON email_track.email_track_code = email_data.email_track_code GROUP BY email_data.email_track_code DESC";
+$query = "SELECT email_data.email_subject,email_data.email_address,email_data.email_body,email_data.email_track_code,email_track.email_status,MAX(email_track.email_open_datetime) AS email_open_datetime FROM email_data LEFT JOIN email_track ON email_track.email_track_code = email_data.email_track_code GROUP BY email_data.email_subject,email_data.email_address,email_data.email_body,email_data.email_track_code,email_track.email_status ORDER BY email_open_datetime DESC";
 
 	$statement = $connect->prepare($query);
 	$statement->execute();
